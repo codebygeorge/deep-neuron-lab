@@ -1,0 +1,31 @@
+.error-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  height: 100%;
+  width: 100vw;
+}
+
+.error-block-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.error-block-button {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-top: 40px;
+}
+
+.error-block-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.error-block-description {
+  font-size: 1.125rem;
+}
