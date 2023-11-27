@@ -1,9 +1,5 @@
 module.exports = {
-  extends: [
-    'airbnb',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-  ],
+  extends: ['airbnb', 'plugin:@typescript-eslint/recommended', 'prettier'],
   plugins: ['react', '@typescript-eslint', 'prettier', 'import'],
   env: {
     browser: true,
@@ -26,6 +22,8 @@ module.exports = {
     project: ['./tsconfig.json'],
   },
   rules: {
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
     'react/react-in-jsx-scope': 'off',
     'prettier/prettier': 'error',
     'import/prefer-default-export': 'off',
@@ -100,6 +98,22 @@ module.exports = {
         jsx: 'never',
         ts: 'never',
         tsx: 'never',
+      },
+    ],
+    'jsx-a11y/label-has-associated-control': [
+      'error',
+      {
+        required: {
+          some: ['nesting', 'id'],
+        },
+      },
+    ],
+    'jsx-a11y/label-has-for': [
+      'error',
+      {
+        required: {
+          some: ['nesting', 'id'],
+        },
       },
     ],
   },

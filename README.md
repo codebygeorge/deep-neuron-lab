@@ -1,3 +1,17 @@
+### **Notes**
+
+1. Task is completed with React.JS
+2. I've used context API to share actions and state between components
+3. React-query is used for fetching
+4. ErrorBoundary used for catching unexpected errors
+5. Newly added todo has 'isLocal' key which indicates that todo is for local use only. And any further action will be executed directly in front-end store (without using APIs as they are returning 404 error)
+6. No special styling tools/packages used. So its simple CSS.
+7. Took checkbox sites from codepen and modified it a bit :)
+
+### Simply run 'yarn start' and enjoy!
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -44,73 +58,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-
-///////////////////////////
-
-
-Frontend Developer Candidate Exercise
-
----
-
-### **Vue.js Todo Application**
-
-**Objective:**
-Develop a fully functional CRUD (Create, Read, Update, Delete) Todo application using Vue.js. This exercise is aimed at evaluating your skills in frontend development, particularly in API integration, application feature implementation using Vue.js and testing. Feel free to be creative and implement something you think it is missing from every similar app.
-
-**API Integration:**
-Your application should use the Todo API provided by DummyJSON (https://dummyjson.com/docs/todos) as its backend.
-
-**Key Features requirements:**
-
-1. **List Todos**: Display todos fetched from the DummyJSON API.
-2. **Create Todo**: Allow users to add new todos via the application interface.
-3. **Update Todo**: Enable editing of existing todos.
-4. **Delete Todo**: Implement a feature to delete todos.
-5. **Error Handling**: Implement robust error handling for API interactions.
-6. **User Interface**: Design a user-friendly and responsive interface.
-7. **State**: Implement a mechanism so that the user can preserve the state when reloading
-8. (Bonus points) - **Filtering/Searching**: Filter by todo state or/and search by text
-
-**Technical Requirements:**
-
-- **Vue.js**: The application must be built using Vue.js.
-- **Libraries and Tools**: You are free to use any additional libraries or tools you find suitable.
-- **Code Quality**: Code should be clean, well-commented, and adhere to best practices.
-- **Responsiveness**: The application should be fully responsive and functional on both desktop and mobile devices.
-- **Documentation**: Include a README with setup and run instructions.
-
-**Testing and Coverage:**
-
-- **Unit Tests**: Write unit tests for your application.
-- **Test Coverage**: Achieve at least 20% unit test coverage for your code.
-
-**Delivery:**
-
-- Submit your application as a Git repository on platforms like GitHub, GitLab, or Bitbucket.
-- Include a clear commit history to show the development and testing process.
-
-**Evaluation Criteria:**
-
-- **Functionality**: All requirements should be met.
-- **Code Quality**: Code should be well-structured and readable.
-- **User Interface**: The UI should be clean, intuitive, and responsive.
-- **Problem-Solving**: Your approach to challenges and feature implementation will be evaluated.
-- **Testing**: Quality and coverage of unit tests.
-
-**Time Frame:**
-
-Complete and submit your application within one week from the assignment date.
-
-
-
-
-
-
-
-
-
-
-
-
-

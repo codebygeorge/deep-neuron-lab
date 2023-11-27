@@ -1,0 +1,67 @@
+.todo-app-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(53 133 113 / 87%);
+  overflow: hidden;
+}
+
+.todo-app-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(53, 133, 113);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(53, 133, 113, 0) 0%,
+    rgba(57, 128, 118, 0) 59%,
+    rgba(103, 58, 183, 0.486453956582633) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(53, 133, 113, 0) 0%,
+    rgba(57, 128, 118, 0) 59%,
+    rgba(103, 58, 183, 0.486453956582633) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(53, 133, 113, 0) 0%,
+    rgba(57, 128, 118, 0) 59%,
+    rgba(103, 58, 183, 0.486453956582633) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#358571",endColorstr="#673ab7",GradientType=1);
+}
+
+.todo-app {
+  position: relative;
+  height: 100vh;
+  padding: 2.5%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.todo-app-body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+.todo-app-title {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.todo-app-list-divider {
+  margin: 10px 30px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: none;
+}
