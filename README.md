@@ -12,9 +12,8 @@
 4. ErrorBoundary used for catching unexpected errors
 5. Newly added todo has 'isLocal' key which indicates that todo is for local use only. And any further action will be executed directly in front-end store (without using APIs as they are returning 404 error)
 6. No special styling tools/packages used. So its simple CSS.
-7. Took checkbox styles from codepen and modified it a bit :)
-
-
+7. `7. State: Implement a mechanism so that the user can preserve the state when reloading` I haven't implemented this point as it's not clear to me. If it's important then explain use cases please and I'll take care!
+8. Took checkbox styles from codepen and modified it a bit :)
 
 
 # Getting Started with Create React App
