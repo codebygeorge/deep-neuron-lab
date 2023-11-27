@@ -28,6 +28,7 @@ const AddTodoButton = memo(() => {
       className="add-button"
       type="button"
       aria-label="Add todo"
+      data-testid="add-button"
       onClick={handleAdd}
       disabled={isLoading}
     >

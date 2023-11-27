@@ -9,11 +9,10 @@ import { Todo } from 'shared/types/models/Todo';
 
 import { useAutosizeTextArea, useClickAway, useDebounce, useDidUpdate } from 'hooks/common';
 
+import Checkbox from 'components/common/checkbox/Checkbox';
 import Loader from 'components/common/loader/Loader';
 
 import './todo-item.css';
-
-import Checkbox from '../../common/checkbox/Checkbox';
 
 type TodoItemProps = {
   data: Todo;
@@ -126,9 +125,15 @@ const TodoItem: FC<TodoItemProps> = memo(({ data }) => {
         'is-loading': isLoading,
         'is-status-changed': completed !== newCompleted,
       })}
+      data-testid="todo-item"
     >
       <div className="todo-item-check">
-        <Checkbox checked={newCompleted} onChange={handleToggle} disabled={isEdited || isLoading} />
+        <Checkbox
+          checked={newCompleted}
+          onChange={handleToggle}
+          disabled={isEdited || isLoading}
+          data-testid="toggle-checkbox"
+        />
       </div>
 
       <div
@@ -140,6 +145,7 @@ const TodoItem: FC<TodoItemProps> = memo(({ data }) => {
         onKeyDown={openEditState}
       >
         <textarea
+          data-testid="todo-item-textarea"
           ref={textAreaRef}
           rows={1}
           value={newValue}
@@ -156,6 +162,7 @@ const TodoItem: FC<TodoItemProps> = memo(({ data }) => {
 
       <div className="todo-item-actions">
         <button
+          data-testid="delete-button"
           className="delete-button"
           type="button"
           aria-label="Delete todo"

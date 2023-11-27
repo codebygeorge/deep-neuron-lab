@@ -3,8 +3,8 @@ import React from 'react';
 
 import App from './App';
 
-test('renders learn react link', () => {
+test('Should render todo app.', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const todoApp = screen.queryByTestId('todo-app-container');
+  expect(todoApp).toBeInTheDocument();
 });

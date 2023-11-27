@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import useGroupedTodos from 'hooks/complex/useGroupedTodos';
+import useFilterGroupedTodos from 'hooks/complex/useFilterGroupedTodos';
 
 import { useGetTodoItemsQuery } from 'queries/useQueries';
 
@@ -16,12 +16,12 @@ import './todo-app.css';
 const TodoApp: FC = () => {
   const { isFetched, isLoading, isError } = useGetTodoItemsQuery();
   const { hasTodos, noSearchResults, notCompletedFilteredTodos, completedFilteredTodos } =
-    useGroupedTodos();
+    useFilterGroupedTodos();
 
   const loadedSuccessfully = isFetched && !isError;
 
   return (
-    <div className="todo-app-container">
+    <div className="todo-app-container" data-testid="todo-app-container">
       <div className="todo-app">
         <h1 className="todo-app-title">Todo List ...</h1>
         {loadedSuccessfully && <SearchBar />}

@@ -23,7 +23,13 @@ const SearchBar: FC = () => {
 
   return (
     <div className="search-bar">
-      <input type="text" placeholder="Search" value={inputValue} onChange={handleInputChange} />
+      <input
+        type="text"
+        placeholder="Search"
+        data-testid="search-input"
+        value={inputValue}
+        onChange={handleInputChange}
+      />
     </div>
   );
 };

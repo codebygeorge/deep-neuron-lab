@@ -1,4 +1,10 @@
-### **Notes**
+## **Steps to run**
+
+1. First of all -> rename file `.env.example` to `.env`
+2. Install packages -> `yarn install`
+3. Finally run and enjoy! -> `yarn start`
+
+## **Notes**
 
 1. Task is completed with React.JS
 2. I've used context API to share actions and state between components
@@ -6,9 +12,8 @@
 4. ErrorBoundary used for catching unexpected errors
 5. Newly added todo has 'isLocal' key which indicates that todo is for local use only. And any further action will be executed directly in front-end store (without using APIs as they are returning 404 error)
 6. No special styling tools/packages used. So its simple CSS.
-7. Took checkbox sites from codepen and modified it a bit :)
+7. Took checkbox styles from codepen and modified it a bit :)
 
-### Simply run 'yarn start' and enjoy!
 
 
 

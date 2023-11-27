@@ -9,7 +9,7 @@ type EmptyBlockProps = {
 
 const EmptyBlock: FC<EmptyBlockProps> = ({ hasTodos, noSearchResults }) =>
   !hasTodos || (hasTodos && noSearchResults) ? (
-    <div className="empty-list">
+    <div className="empty-list" data-testid="empty-block">
       <span>{hasTodos && noSearchResults ? 'No todos found' : 'You have no todos!'}</span>
     </div>
   ) : (

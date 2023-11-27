@@ -22,14 +22,14 @@ type GroupedTodos = {
  */
 
 /**
- * useGroupedTodos Hook
+ * useFilterGroupedTodos Hook
  *
  * A custom hook that filters and groups them into completed and not completed categories.
  *
  * @returns {GroupedTodos}
  */
 
-export const useGroupedTodos = (): GroupedTodos => {
+export const useFilterGroupedTodos = (): GroupedTodos => {
   const { data } = useGetTodoItemsQuery();
   const { searchValue } = useStateProvider();
   const { todos } = data || {};
@@ -72,4 +72,4 @@ export const useGroupedTodos = (): GroupedTodos => {
   }, [todos, searchValue]);
 };
 
-export default useGroupedTodos;
+export default useFilterGroupedTodos;

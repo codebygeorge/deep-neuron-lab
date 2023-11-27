@@ -1,12 +1,4 @@
-import {
-  Dispatch,
-  ReactNode,
-  SetStateAction,
-  createContext,
-  useContext,
-  useMemo,
-  useState,
-} from 'react';
+import { FC, ReactNode, createContext, useContext, useMemo, useState } from 'react';
 
 import useTodoActions from 'hooks/complex/useTodoActions';
 
@@ -15,13 +7,12 @@ type State = {
 };
 
 type Actions = {
-  // setSearchValue: Dispatch<SetStateAction<string>>;
   setSearchValue: (newSearch: string) => void;
-  // resetSearchValue(): void;
 } & ReturnType<typeof useTodoActions>;
 
 type StateProviderProps = {
   children: ReactNode;
+  // eslint-disable-next-line react/require-default-props
   initialState?: State;
 };
 
@@ -31,7 +22,7 @@ const Context = createContext<StateProviderValue | null>(null);
 
 const INITIAL_STATE: State = { searchValue: '' };
 
-const StateProvider = ({ children, initialState = INITIAL_STATE }: StateProviderProps) => {
+const StateProvider: FC<StateProviderProps> = ({ children, initialState = INITIAL_STATE }) => {
   const [state, setState] = useState<State>(initialState);
   const todoActions = useTodoActions();
 
@@ -42,9 +33,6 @@ const StateProvider = ({ children, initialState = INITIAL_STATE }: StateProvider
         setState((prevState) => ({ ...prevState, searchValue: newSearch }));
       },
       ...todoActions,
-      // resetSearchValue: () => {
-      //   setState(INITIAL_STATE);
-      // },
     }),
     [state, todoActions],
   );
