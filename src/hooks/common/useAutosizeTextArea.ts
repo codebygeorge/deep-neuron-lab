@@ -1,16 +1,15 @@
-import { useEffect } from 'react';
+import { RefObject, useEffect } from 'react';
 
-// Updates the height of a <textarea> when the value changes.
-const useAutosizeTextArea = (textAreaRef: HTMLTextAreaElement | null, value: string) => {
+// TODO -> Note: resize event is currently not handled.
+
+const useAutosizeTextArea = (textAreaRef: RefObject<HTMLTextAreaElement>, value: string) => {
   useEffect(() => {
-    if (textAreaRef) {
-      // We need to reset the height momentarily to get the correct scrollHeight for the textarea
-      textAreaRef.style.height = '0px';
-      const { scrollHeight } = textAreaRef;
+    const textAreaElement = textAreaRef?.current;
+    if (textAreaElement) {
+      textAreaElement.style.height = '0px';
+      const { scrollHeight } = textAreaElement;
 
-      // We then set the height directly, outside of the render loop
-      // Trying to set this with state or a ref will product an incorrect value.
-      textAreaRef.style.height = `${scrollHeight}px`;
+      textAreaElement.style.height = `${scrollHeight}px`;
     }
   }, [textAreaRef, value]);
 };

@@ -35,7 +35,7 @@ const TodoItem: FC<TodoItemProps> = memo(({ data }) => {
 
   const isEdited = newValue !== todo;
 
-  useAutosizeTextArea(textAreaRef.current, newValue);
+  useAutosizeTextArea(textAreaRef, newValue);
   const { disable: disableClickAway, enable: enableClickAway } = useClickAway(
     itemRef,
     closeEditState,
