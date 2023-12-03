@@ -1,8 +1,4 @@
-## **Steps to run**
-
-1. First of all -> rename file `.env.example` to `.env`
-2. Install packages -> `yarn install`
-3. Finally run and enjoy! -> `yarn start`
+# deep-neuron-lab
 
 ## **Notes**
 
@@ -15,6 +11,11 @@
 7. `7. State: Implement a mechanism so that the user can preserve the state when reloading` I haven't implemented this point as it's not clear to me. If it's important then explain use cases please and I'll take care!
 8. Took checkbox styles from codepen and modified it a bit :)
 
+## **Steps to run**
+
+1. First of all -> rename file `.env.example` to `.env`
+2. Install packages -> `yarn install`
+3. Finally run and enjoy! -> `yarn start`
 
 # Getting Started with Create React App
 

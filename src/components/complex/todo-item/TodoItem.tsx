@@ -156,7 +156,7 @@ const TodoItem: FC<TodoItemProps> = memo(({ data }) => {
               e.currentTarget.value.length,
             )
           }
-          disabled={!isEditing}
+          disabled={!isEditing || isWaiting}
         />
       </div>
 
@@ -167,7 +167,7 @@ const TodoItem: FC<TodoItemProps> = memo(({ data }) => {
           type="button"
           aria-label="Delete todo"
           onClick={handleDelete}
-          disabled={isEdited || isLoading}
+          disabled={isEdited || isLoading || isWaiting}
         >
           {isLoading ? <Loader /> : <FontAwesomeIcon icon={faXmark} />}
         </button>
